@@ -27,7 +27,7 @@ class Team(models.Model):
 @receiver(post_migrate)
 def create_default_teams(sender, **kwargs):
     if sender.name == 'task':  # 앱 이름이 'task'인 경우에만 초기 데이터 생성
-        default_teams = ["단비", "다래", "블라블라", "철로", "땅이", "해태", "수피"]
+        default_teams = ["a", "b", "c", "d", "e", "f", "g"]
         for team_name in default_teams:
             Team.objects.get_or_create(name=team_name)
 
